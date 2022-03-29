@@ -1,0 +1,441 @@
+Administrator@Sanjith MINGW64 ~ (master)
+$ git --version
+git version 2.32.0.windows.2
+
+Administrator@Sanjith MINGW64 ~ (master)
+$ git config --global user.name "GeethanjaliAnbalagan"
+
+Administrator@Sanjith MINGW64 ~ (master)
+$ mkdir myFolder
+
+Administrator@Sanjith MINGW64 ~ (master)
+$ cd myFolder
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ ls
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git init
+Initialized empty Git repository in C:/Users/Administrator/myFolder/.git/
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ ls
+index.txt  Readme.txt
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Readme.txt
+        index.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git add index.txt
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Readme.txt
+
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git add --all
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Readme.txt
+        new file:   index.txt
+
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git commit -m "First commit"
+[master (root-commit) 3e87053] First commit
+ 2 files changed, 4 insertions(+)
+ create mode 100644 Readme.txt
+ create mode 100644 index.txt
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git add --all
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Readme.txt
+
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git commit -a -m "Second Updated commit"
+[master b371824] Second Updated commit
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git log
+commit b371824c60c9c70e33d55a8fd93d58e95087c5dc (HEAD -> master)
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Tue Mar 29 18:32:11 2022 +0530
+
+    Second Updated commit
+
+commit 3e870534f6e1092aab8e469efef66c7e55bd49d3
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Tue Mar 29 18:28:51 2022 +0530
+
+    First commit
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git help --all
+See 'git help <command>' to read about a specific subcommand
+
+Main Porcelain Commands
+   add                  Add file contents to the index
+   am                   Apply a series of patches from a mailbox
+   archive              Create an archive of files from a named tree
+   bisect               Use binary search to find the commit that introduced a bug
+   branch               List, create, or delete branches
+   bundle               Move objects and refs by archive
+   checkout             Switch branches or restore working tree files
+   cherry-pick          Apply the changes introduced by some existing commits
+   citool               Graphical alternative to git-commit
+   clean                Remove untracked files from the working tree
+   clone                Clone a repository into a new directory
+   commit               Record changes to the repository
+   describe             Give an object a human readable name based on an available ref
+   diff                 Show changes between commits, commit and working tree, etc
+   fetch                Download objects and refs from another repository
+   format-patch         Prepare patches for e-mail submission
+   gc                   Cleanup unnecessary files and optimize the local repository
+   gitk                 The Git repository browser
+   grep                 Print lines matching a pattern
+   gui                  A portable graphical interface to Git
+   init                 Create an empty Git repository or reinitialize an existing one
+   log                  Show commit logs
+   maintenance          Run tasks to optimize Git repository data
+   merge                Join two or more development histories together
+:
+-------------------------------------------------------------------------------------------------------------------------
+
+Administrator@Sanjith MINGW64 ~ (master)
+$ cd myFolder
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git log
+commit b371824c60c9c70e33d55a8fd93d58e95087c5dc (HEAD -> master)
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Tue Mar 29 18:32:11 2022 +0530
+
+    Second Updated commit
+
+commit 3e870534f6e1092aab8e469efef66c7e55bd49d3
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Tue Mar 29 18:28:51 2022 +0530
+
+    First commit
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git branch 1-Branch
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git branch
+  1-Branch
+* master
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git checkout 1-Branch
+Switched to branch '1-Branch'
+
+Administrator@Sanjith MINGW64 ~/myFolder (1-Branch)
+$ git status
+On branch 1-Branch
+nothing to commit, working tree clean
+
+Administrator@Sanjith MINGW64 ~/myFolder (1-Branch)
+$ git status
+On branch 1-Branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@Sanjith MINGW64 ~/myFolder (1-Branch)
+$ git add --all
+
+Administrator@Sanjith MINGW64 ~/myFolder (1-Branch)
+$ git status
+On branch 1-Branch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.txt
+
+
+Administrator@Sanjith MINGW64 ~/myFolder (1-Branch)
+$ git commit -m "Third commit"
+[1-Branch 05cad3c] Third commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Administrator@Sanjith MINGW64 ~/myFolder (1-Branch)
+$ git status
+On branch 1-Branch
+nothing to commit, working tree clean
+
+Administrator@Sanjith MINGW64 ~/myFolder (1-Branch)
+$ git log
+commit 05cad3c237959f77398aa8683f0223a74a6f5db4 (HEAD -> 1-Branch)
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Tue Mar 29 18:45:28 2022 +0530
+
+    Third commit
+
+commit b371824c60c9c70e33d55a8fd93d58e95087c5dc (master)
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Tue Mar 29 18:32:11 2022 +0530
+
+    Second Updated commit
+
+commit 3e870534f6e1092aab8e469efef66c7e55bd49d3
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Tue Mar 29 18:28:51 2022 +0530
+
+    First commit
+
+Administrator@Sanjith MINGW64 ~/myFolder (1-Branch)
+$ ls
+index.txt  Readme.txt
+
+Administrator@Sanjith MINGW64 ~/myFolder (1-Branch)
+$ git checkout master
+Switched to branch 'master'
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ ls
+index.txt  Readme.txt
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git checkout -b emergency -fix
+error: unknown switch `i'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --guess               second guess 'git checkout <no-such-branch>' (default)
+    --overlay             use overlay mode (default)
+    -q, --quiet           suppress progress reporting
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    -m, --merge           perform a 3-way merge with the new branch
+    --conflict <style>    conflict style (merge or diff3)
+    -d, --detach          detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    -f, --force           force checkout (throw away local modifications)
+    --orphan <new-branch>
+                          new unparented branch
+    --overwrite-ignore    update ignored files (default)
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git checkout -b emergency-fix
+Switched to a new branch 'emergency-fix'
+
+Administrator@Sanjith MINGW64 ~/myFolder (emergency-fix)
+$ git status
+On branch emergency-fix
+nothing to commit, working tree clean
+
+Administrator@Sanjith MINGW64 ~/myFolder (emergency-fix)
+$ git add index.txt
+
+Administrator@Sanjith MINGW64 ~/myFolder (emergency-fix)
+$ ls
+index.txt  Readme.txt
+
+Administrator@Sanjith MINGW64 ~/myFolder (emergency-fix)
+$ git checkout master
+Switched to branch 'master'
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git merge emergency-fix
+Already up to date.
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git branch -d emergency-fix
+Deleted branch emergency-fix (was b371824).
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git checkout 1-Branch
+Switched to branch '1-Branch'
+
+Administrator@Sanjith MINGW64 ~/myFolder (1-Branch)
+$ git log
+commit 05cad3c237959f77398aa8683f0223a74a6f5db4 (HEAD -> 1-Branch)
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Tue Mar 29 18:45:28 2022 +0530
+
+    Third commit
+
+commit b371824c60c9c70e33d55a8fd93d58e95087c5dc (master)
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Tue Mar 29 18:32:11 2022 +0530
+
+    Second Updated commit
+
+commit 3e870534f6e1092aab8e469efef66c7e55bd49d3
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Tue Mar 29 18:28:51 2022 +0530
+
+    First commit
+
+Administrator@Sanjith MINGW64 ~/myFolder (1-Branch)
+$ git remote add origin https://github.com/GeethanjaliAnbalagan/University-123.git
+
+Administrator@Sanjith MINGW64 ~/myFolder (1-Branch)
+$ git checkout master
+Switched to branch 'master'
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git remote add origin https://github.com/GeethanjaliAnbalagan/University-123.git
+error: remote origin already exists.
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git push --set-upstream origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 584 bytes | 116.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/GeethanjaliAnbalagan/University-123/pull/new/master
+remote:
+To https://github.com/GeethanjaliAnbalagan/University-123.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git fetch origin
+remote: Enumerating objects: 18, done.
+remote: Counting objects: 100% (18/18), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 18 (delta 4), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (18/18), 3.80 KiB | 28.00 KiB/s, done.
+From https://github.com/GeethanjaliAnbalagan/University-123
+ * [new branch]      1-Branch   -> origin/1-Branch
+ * [new branch]      2-Branch   -> origin/2-Branch
+ * [new branch]      main       -> origin/main
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git log origin/mater
+fatal: ambiguous argument 'origin/mater': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git log origin/master
+commit b371824c60c9c70e33d55a8fd93d58e95087c5dc (HEAD -> master, origin/master)
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Tue Mar 29 18:32:11 2022 +0530
+
+    Second Updated commit
+
+commit 3e870534f6e1092aab8e469efef66c7e55bd49d3
+Author: GeethanjaliAnbalagan <geethanjali30@gmail.com>
+Date:   Tue Mar 29 18:28:51 2022 +0530
+
+    First commit
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git merge origin/master
+Already up to date.
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Administrator@Sanjith MINGW64 ~/myFolder (master)
+$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
